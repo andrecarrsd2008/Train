@@ -1,0 +1,45 @@
+body{
+    background-color: white;
+}
+
+.jumbotron{
+    background-color: rgb(100, 53, 53);
+    color: white;
+    margin-left: 100px;
+    margin-right: 100px;
+    height: 140px;
+    padding: 20px;
+    font-family: 'Arial Narrow', Arial, sans-serif;
+}
+
+.container{
+    height: 475px;
+    background-color: rgb(230, 225, 225);
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(113, 113, 230);
+    
+}
+
+.start{
+    background-color: navy;
+    color: white;
+    height: 30px;
+    font-size: 20px;
+}
+.panel-primary{
+    background-color: rgb(29, 29, 88);
+    margin: 15px;
+    color: white;
+    height: 30px;
+}
+
+
+.container1{
+    border-style: solid;
+    border-width: thin;
+    border-color: rgb(111, 111, 240);
+    margin-left: 100px;
+    margin-right: 100px;
+    
+}

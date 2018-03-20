@@ -32,7 +32,10 @@ $("#add-user").on("click", function () {
   destination = $("#dest-input").val().trim();
   frequency = $("#freq-input").val().trim();
   //minutes = $("#minutes-input").val().trim();
+ 
   console.log(name)
+  console.log(destination)
+  console.log(frequency)
 
   database.ref().push({
     name: name,
@@ -58,6 +61,7 @@ database.ref().on("child_added", function (snapshot) {
 
 //   // Change the HTML to reflect
  svName = snapshot.val().name;
+ svDestination = snapshot.val().name;
   //$("#dest-display").snapshot.val().destination;
   //$("#freq-display").snapshot.val().frequency;
 //   $("#next-display").text(snapshot.val().next);
@@ -73,9 +77,9 @@ database.ref().on("child_added", function (snapshot) {
   nameTd.append(svName);
   tr.append(nameTd);
 
-  // var destinationTd = $("<td>");
-  // destinationTd.append(sv.destination);
-  // tr.append(destinationTd);
+  var destinationTd = $("<td>");
+  destinationTd.append(svDestination);
+  tr.append(destinationTd);
 
   // var frequenceyTd = $("<td>");
   // frequencyTd.append(sv.frequency);

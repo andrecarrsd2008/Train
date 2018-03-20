@@ -3,15 +3,15 @@
 
   // Initialize Firebase
   var config = {
-    apiKey: "AIzaSyA5eYKsB8T2q6rMGdKSvac6eQsWTzsZEjE",
-    authDomain: "fir-recent-user.firebaseapp.com",
-    databaseURL: "https://fir-recent-user.firebaseio.com",
-    storageBucket: "fir-recent-user.appspot.com"
+    apiKey: "AIzaSyBhdtTtPCgkUrclwKRfJowuIWysElFoIzo",
+    authDomain: "fir-a0834.firebaseapp.com",
+    databaseURL: "https://fir-a0834.firebaseio.com",
+    projectId: "fir-a0834",
+    storageBucket: "fir-a0834.appspot.com",
+    messagingSenderId: "458044638999"
   };
-
   firebase.initializeApp(config);
-
-  // Create a variable to reference the database
+  
   var database = firebase.database();
 
    // Initial Values
@@ -31,8 +31,7 @@
      // Don't forget to provide initial data to your Firebase database.
      name = $("#name-input").val().trim();
      destination = $("#dest-input").val().trim();
-     frequency = $("#freq-inpust").val().trim();
-     next = $("#next-input").val().trim();
+     frequency = $("#freq-input").val().trim();
      minutes = $("#minutes-input").val().trim();
 
      database.ref().set({
@@ -42,6 +41,8 @@
        next: next,
        minutes: minutes,
      });
+
+     $("#name-input").val("");
 
    });
 
@@ -69,30 +70,29 @@
    
    var tr = $("<tr>")
     
-   var employeeTd = $("<td>");
-   employeeTd.append(sv.employee);
-   tr.append(employeeTd);
+   var nameTd = $("<td>");
+   nameTd.append(sv.name);
+   tr.append(nameTd);
 
-   var roleTd = $("<td>");
-   roleTd.append(sv.role);
-   tr.append(roleTd);
+   var destinationTd = $("<td>");
+   destinationTd.append(sv.destination);
+   tr.append(destinationTd);
 
-   var dateTd = $("<td>");
-   dateTd.append(sv.date);
-   tr.append(dateTd);
+   var frequenceyTd = $("<td>");
+   frequencyTd.append(sv.frequency);
+   tr.append(frequencyTd);
 
 
-   var monthlyTd = $("<td>");
-   monthlyTd.append(sv.monthly);
-   tr.append(monthlyTd);
+   var nextTd = $("<td>");
+   nextTd.append(sv.next);
+   tr.append(nextTd);
    
-   var workedTd = $("<td>");
-   workedTd.append(sv.worked);
-   tr.append(workedTd);
+   var minutesTd = $("<td>");
+   minutesTd.append(sv.minutes);
+   tr.append(minutesTd);
 
-   var billedTd = $("<td>");
-   billedTd.append(sv.billed);
-   tr.append(billedTd);
    
    $("#table1").append(tr);
    });
+
+   

@@ -3,13 +3,14 @@ body{
 }
 
 .jumbotron{
-    background-color: rgb(100, 53, 53);
+    background-color: rgb(124, 63, 63);
     color: white;
     margin-left: 100px;
     margin-right: 100px;
     height: 140px;
     padding: 20px;
     font-family: 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
 }
 
 .container{
